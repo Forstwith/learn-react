@@ -21,7 +21,7 @@ var canvas = document.getElementById("cas"),
     isrunning: false,
     init: function() {
       balls = [];
-      var num = 1000;
+      var num = 500;
       for (var i = 0; i <= num; i++) {
         var k = -1 + (2 * (i + 1) - 1) / num;
         var a = Math.acos(k);
@@ -107,7 +107,7 @@ var canvas = document.getElementById("cas"),
       var scale = fl / (fl - this.z);
       var alpha = (this.z + Radius) / (2 * Radius);
       ctx.arc(vpx + this.x, vpy + this.y, this.r * scale, 0, 2 * Math.PI, true);
-      ctx.fillStyle = "rgba(0,0,0," + (alpha + 0.5) + ")"
+      ctx.fillStyle = "rgba(255,255,255," + (alpha + 0.5) + ")"
       ctx.fill();
       ctx.restore();
     }
@@ -121,5 +121,3 @@ var canvas = document.getElementById("cas"),
     this.innerText === "开始" ? animation.stop() : animation.start();
     ;
   }
-  
-  //dasas
